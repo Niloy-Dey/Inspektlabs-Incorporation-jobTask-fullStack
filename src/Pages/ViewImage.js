@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './ViewImage.css'
 const ViewImage = () => {
-
+    const navigate = useNavigate();
+    const backHome =() =>{
+        navigate('/home')
+    }
     const [images, setImage] = useState([]);
     // console.log(images)
     useEffect(() =>{
@@ -18,7 +21,7 @@ const ViewImage = () => {
                 images.map(image => <img className='imageHover' src={image.imageData} alt="" />)
             }
            </div>
-            <Link to="home"><button className=' p-3  m-5 rounded bg-success text-white '>back to home</button></Link>
+            <button onClick={backHome} className=' p-3  m-5 rounded bg-success text-white '>back to home</button>
            </div>
         </div>
     );

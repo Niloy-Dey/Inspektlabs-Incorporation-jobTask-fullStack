@@ -6,7 +6,7 @@ const ViewImage = () => {
     const [images, setImage] = useState([]);
     // console.log(images)
     useEffect(() =>{
-        fetch('http://localhost:5000/images') 
+        fetch('https://radiant-bayou-10996.herokuapp.com/images') 
             .then(res => res.json())
             .then(data => setImage(data))
     })

@@ -27,7 +27,7 @@ const UploadImage = () => {
                     console.log(image);
 
                     //send to my database;
-                    fetch(`http://localhost:5000/image`, {
+                    fetch(`https://radiant-bayou-10996.herokuapp.com/image`, {
                         method: 'POST',
                         headers: {
                             'Content-type': 'application/json'

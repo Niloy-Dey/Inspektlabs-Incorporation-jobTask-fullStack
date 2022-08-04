@@ -4,7 +4,7 @@ import './ViewImage.css'
 const ViewImage = () => {
     const navigate = useNavigate();
     const backHome =() =>{
-        navigate('/home')
+        navigate('/')
     }
     const [images, setImage] = useState([]);
     // console.log(images)

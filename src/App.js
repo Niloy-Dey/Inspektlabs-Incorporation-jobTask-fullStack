@@ -1,13 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
-import SignIn from './Pages/SignIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import UploadImage from "./Pages/UploadImage";
+import ViewImage from "./Pages/ViewImage";
 function App() {
   return (
     <div className="">
         <Routes>
         <Route path="/" element={<Home></Home>} />
-        <Route path="/signIn" element={<SignIn></SignIn>} />
+        <Route path="/uploadImage" element={<UploadImage></UploadImage>} />
+        <Route path="/viewImage" element={<ViewImage></ViewImage>} />
       </Routes>
     </div>
   );
